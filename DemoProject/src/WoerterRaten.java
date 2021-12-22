@@ -25,10 +25,13 @@ public class WoerterRaten {
 		System.out.println("Dein Tipp:");
 		String tipp = eingabe.next();
 		
-		if (tipp.charAt(0) == wort.charAt(0)) {
-			System.out.println("1. Buchstaabe richtig");
-	} else {
-		System.out.println("1. Buchstabe falsch!");
+		for (int i=0; i<wort.length();i++) {
+			if (tipp.charAt(i) == wort.charAt(i)) {
+				System.out.print(tipp.charAt(i));
+			} else {
+				System.out.print("*");
 			}
+		}
+		System.out.println();
 		}
 	}
